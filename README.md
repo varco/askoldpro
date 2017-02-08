@@ -9,8 +9,10 @@ This app is forked from a 2016 project, and is used as a quick skill demonstrati
 
 ## Dependencies ##
 
- * Grunt build system
+ * Grunt build system, depends on bower.js
  * Requires npm, bower, and compass
+ * RequireJS (app/index.html => app/js/main.js)
+ * Angular 1.4 (appConfig in app/js/app.js)
 
 ### setup ###
 
@@ -20,10 +22,12 @@ This app is forked from a 2016 project, and is used as a quick skill demonstrati
     `compass compile`
     `cd app && compass compile`
 
-### build ###
+### build system ###
+    `grunt serve`
     `grunt build`
+    `grunt test`
 
-#### More code! ###
+## More code! ##
 
 * [WordPress Makefile](https://github.com/varco/wp-makefile)
 * [CodePen](http://codepen.io/var)
