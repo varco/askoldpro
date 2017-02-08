@@ -1,0 +1,57 @@
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+html.lte-ie9 {
+	#loader {
+	    display: block;
+	    position: relative;
+	    left: 50%;
+	    top: 50%;
+	    width: 150px;
+	    height: 150px;
+	    margin: -75px 0 0 -75px;
+	    // border-radius: 50%;
+	    border: none;
+	    // border-top-color: $color-red;
+
+	    // -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+	    // animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+	    z-index: 1001;
+		background: url('/../images/osler-o.svg');
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        // border-radius: 50%;
+        border: none;
+        // border-top-color: $color-red;
+
+        // -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        // animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        // border-radius: 50%;
+        border: none;
+        // border-top-color: $color-red;
+
+        // -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        //   animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+}

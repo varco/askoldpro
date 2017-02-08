@@ -1,0 +1,169 @@
+[
+	{
+		"1" : {
+			"title" : "Here to help.",
+			"subtitle" : "This is quick Q&A to inform us about what you are looking to achieve.",
+			"note" : {
+				"title" : "",
+				"copy" : "You will be recommended solutions based on your answers, and encouraged to contact <em>Old Pro</em> when appropiate."
+			},
+			"questions" : {
+				"1" : {
+					"text" : "Do you need help with your computer, or enhancing general computer and computing literacy?",
+					"yes" : {
+						"location": [2,1]
+					},
+					"no" : {
+						"location": [1,2]
+					}
+				},
+				"2" : {
+					"text" : "Are you researching or troubleshooting a technical solution for a project?",
+					"yes" : {
+						"location": [3,1]
+					},
+					"no" : {
+						"location": [1,3]
+					}
+				},
+				"3" : {
+					"text" : "Do you need career guidance or mentorship in Web Development?",
+					"yes" : {
+						"location": [4,1]
+					},
+					"no" : {
+						"location": [1,4]
+					}
+				},
+				"4" : {
+					"text" : "Do you need a website built from scratch?",
+					"yes" : {
+						"location": [0],
+						"stop" : "A website is can be a big, beautiful, organic entity - or a static business card to suit your needs. Let's talk about your present needs and pain points, digging deep into what is guiding your project. <a href='mailto:ask@oldpro.ca?subject=New Website Build Request'><strong>Email us!</strong></a>"
+					},
+					"no" : {
+						"location": [2,1]
+					}
+				}
+			}
+		},
+		"2": {
+			"title" : "Let's take it slow",
+			"subtitle" : "It's hard to tell sometimes if a computer if friend or foe. There is A LOT to consider. Ask Old Pro any question, whether it seems basic. We build on foundations.",
+			"questions" : {
+				"1" : {
+					"text" : "Is your learning directed by your career?",
+					"yes" : {
+						"location": [2,2]
+					},
+					"no" : {
+						"location": [2,3]
+					}
+				},
+				"2" : {
+					"text" : "Does your employer have a training budget?",
+					"yes" : {
+						"location": [2,3]
+					},
+					"no" : {
+						"location": [2,4]
+					}
+				},
+				"3" : {
+					"text" : "Do you need assistance at your office?",
+					"yes" : {
+						"location": [0],
+						"stop" : "<a href='mailto:ask@oldpro.ca?subject=In-Office Support Request'><strong>Email us</strong></a> with your in-office needs and we will respond asap."
+					},
+					"no" : {
+						"location": [2,4]
+					}
+				},
+				"4" : {
+					"text" : "Do you need assistance at your home?",
+					"yes" : {
+						"location": [2,5]
+					},
+					"no" : {
+						"location": [0],
+						"stop" : "<a href='mailto:ask@oldpro.ca?subject=In-Home Support Request'><strong>Email us</strong></a> with your in-home needs and we will respond asap."
+					}
+				},
+				"5" : {
+					"text" : "Can we work over Skype instead?",
+					"yes" : {
+						"location": [0],
+						"stop" : "<a href='mailto:ask@oldpro.ca?subject=Skype Support Request'><strong>Email us</strong></a> with your request, including your Skype address, and we will respond asap."
+
+					},
+					"no" : {
+						"location": [3,1]
+					}
+				}
+			}
+		},
+		"3": {
+			"title" : "Let's build together",
+			"subtitle" : "Whether you are an entrepreneur needing to learn WordPress or optimize your search ranking, or a designer looking for code support. ",
+			"questions" : {
+				"1" : {
+					"text" : "Is this a personal project?",
+					"yes" : {
+						"location": [3,2]
+					},
+					"no" : {
+						"location": [3,2]
+					}
+				},
+				"2" : {
+					"text" : "Do you have a budget?",
+					"yes" : {
+						"location": [3,3]
+					},
+					"no" : {
+						"location": [3,3]
+					}
+				},
+				"3" : {
+					"text" : "Do you have time to work on this project?",
+					 "yes" : {
+						"location": [0],
+						"stop" : "<a href='mailto:ask@oldpro.ca?subject=Troubleshooting Request'><strong>Email us</strong></a> "
+					},
+					"no" : {
+						"location": [0],
+						"stop" : "Your answers indicate that we are not suited to work together."
+					}
+				}
+			}
+		},
+		"4": {
+			"title" : "Think On These Things",
+			"subtitle" : "If you are junior or intermediate coder looking to upgrade your skills with a tutor, or looking for tips on how to get job ready - have a convesration with Old Pro first.",
+			"questions" : {
+				"1" : {
+					"text" : "Are you currently in school?",
+					"yes" : {
+						"location": [0],
+						"stop" : "<a href='mailto:ask@oldpro.ca?subject=Job Readiness Advice Request'><strong>Email us</strong></a> to talk about your web career."
+					},
+					"no" : {
+						"location": [4,2]
+					}
+				},
+				"2" : {
+					"text" : "Do you have time to spend learning?",
+					"yes" : {
+						"location": [0],
+						"stop" : "<a href='mailto:ask@oldpro.ca?subject=Career Advice Request'><strong>Email us</strong> to talk about your web career.</a> "
+					},
+					"no" : {
+						"location": [0],
+						"stop" : "Your answers indicate that we are not suited to work together."
+
+					}
+				}
+			}
+		}
+	}
+]

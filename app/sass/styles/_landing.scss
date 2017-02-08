@@ -1,0 +1,305 @@
+.landing {
+	background-position: 200% top;
+
+	#big-o {
+		background-image: url("../images/big-o.png");
+		background-position: left top;
+		background-repeat: no-repeat;
+		height: 100%;
+		width: 628px;
+		max-width: 35%;
+		position: absolute;
+		z-index: 1;
+		right: 0;
+		-webkit-animation: inFromRight 1s ease-out 1 0s;
+		-moz-animation: inFromRight 1s ease-out 1 0s;
+		-o-animation: inFromRight 1s ease-out 1 0s;
+		animation: inFromRight 1s ease-out 1 0s;
+	}
+
+	#start-here {
+		-webkit-animation: bounce 2s 2 2s;
+		-moz-animation: bounce 2s 2 2s;
+		-o-animation: bounce 2s 2 2s;
+		animation: bounce 2s 2 2s;
+	}
+
+	#wrapper {
+		header#header {
+			#header-content::before {
+				@include landingHeaderHeightMax;
+				// background-image: url("../images/stock-red.jpg");
+				// background-size: cover;
+				// background-position: center center;
+				// background-repeat: no-repeat;
+			}
+
+			h1 {
+				margin-bottom: rem-calc(50px);
+			}
+
+			h2.tagline {
+				font-size: rem-calc(40px);
+				line-height: rem-calc(56px);
+				color: $color-white;
+				width: 50%;
+				max-width: rem-calc(570px); // keeping the heading on 2 lines
+				margin-top: rem-calc(40px);
+				margin-bottom: rem-calc(30px);
+				font-weight: 100;
+			}
+
+			.start-button {
+				&:link, &:visited {
+					@include round(5px);
+					background-color: $color-blue;
+					background-position: 88% 50%;
+					background-repeat: no-repeat;
+					color: $color-white;
+					font-size: rem-calc(20px);
+					line-height: rem-calc(65px);
+					font-weight: 600;
+					padding: 18px 90px 18px 25px;
+					text-transform: uppercase;
+					vertical-align: middle;
+					position: relative;
+				}
+			}
+
+			#start-here {
+				&:link, &:visited {
+					span {
+						background-image: url("../images/arrow-right-white.svg");
+						position: absolute;
+						position: absolute;
+						height: 40px;
+						width: 45px;
+						top: 12px;
+						right: 27px;
+						background-repeat: no-repeat;
+						transition: right 250ms;
+						background-size: contain;
+					}
+					@media #{$small-only} {
+						span {
+							height: 25px;
+							right: 0px;
+							top: 9px;
+						}
+						&:hover, &:visited {
+							span {
+								right: -4px;
+							}
+						}
+					}
+				}
+				&:hover, &:visited {
+					span {
+						right: 22px;
+					}
+				}
+			}
+			#resume-here {
+				margin-right: 2%;
+				&:link, &:visited {
+					background-position: right 20px center;
+					span {
+						background-image: url("../images/arrow-right-white.svg");
+						position: absolute;
+						height: 40px;
+						width: 45px;
+						top: 12px;
+						right: 27px;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+					@media #{$small-only} {
+						span {
+							height: 25px;
+							right: -8px;
+							top: 9px;
+						}
+						&:hover, &:visited {
+							span {
+								right: -12px;
+							}
+						}
+					}
+				}
+				&:hover, &:visited {
+					span {
+						right: 22px;
+					}
+				}
+			}
+			#reset-here {
+				&:link, &:visited {
+					span {
+						background-image: url("../images/arrow-left-alt-white.svg");
+						position: absolute;
+						height: 63px;
+						width: 45px;
+						top: 13px;
+						right: 27px;
+						background-repeat: no-repeat;
+						background-size: contain;
+					}
+					@media #{$small-only} {
+						span {
+							height: 25px;
+							right: -2px;
+							top: 9px;
+						}
+						&:hover, &:visited {
+							span {
+								right: -6px;
+							}
+						}
+					}
+				}
+				&:hover, &:visited {
+					span {
+						right: 22px;
+					}
+				}
+			}
+		}
+		main#container {
+			h1 {
+				font-size: rem-calc(40px);
+				line-height: rem-calc(50px);
+				font-weight: 100;
+				color: $color-grey-dark;
+				margin-top: rem-calc(30px);
+				margin-bottom: rem-calc(40px);
+			}
+			article {
+				p {
+					font-size: rem-calc(20px);
+					line-height: rem-calc(28px);
+					margin-bottom: 1.5rem;
+				}
+				em {
+					font-style: italic;
+				}
+				.asterisk {
+					color: $color-grey-dark;
+					font-style: italic;
+					font-size: rem-calc(18px);
+					line-height: rem-calc(25px);
+					margin: 3rem 0;
+					font-weight: 500;
+				}
+			}
+		}
+
+	}
+
+	@media #{$medium-down} {
+		#wrapper {
+			header#header {
+				.start-button {
+					&:link, &:visited {
+						padding: 8px 55px 8px 15px;
+					}
+				}
+				#start-here {
+					&:link, &:visited {
+						background-size: 14%;
+					}
+				}
+				#resume-here {
+					&:link, &:visited {
+						padding: 8px 38px 8px 15px;
+						background-position: right 3px center;
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$medium-only} {
+		#wrapper {
+			header#header {
+				#header-content::before {
+					@include landingHeaderHeightMed;
+				}
+				h1 {
+					margin-bottom: rem-calc(30px);
+				}
+				h2.tagline {
+					width: 65%;
+				    max-width: rem-calc(470px); // keeping the heading on 2 lines
+					font-size: rem-calc(50px);
+					line-height: rem-calc(55px);
+				}
+
+			}
+			main#container {
+				h1 {
+					font-size: rem-calc(37px);
+					line-height: rem-calc(45px);
+					margin-top: rem-calc(30px);
+					margin-bottom: rem-calc(40px);
+				}
+				article {
+					p {
+						font-size: rem-calc(18px);
+						line-height: rem-calc(26px);
+						margin-bottom: 1.5rem;
+					}
+					em {
+						font-style: italic;
+					}
+					.asterisk {
+						color: $color-grey-dark;
+						font-style: italic;
+						font-size: rem-calc(18px);
+						line-height: rem-calc(25px);
+						margin: 3rem 0;
+						font-weight: 100;
+					}
+				}
+			}
+		}
+	}
+
+	@media #{$small-only} {
+		#wrapper {
+			header#header {
+				#header-content::before {
+					@include landingHeaderHeightMin;
+				}
+				h1 {
+					margin-bottom: rem-calc(10px);
+				}
+        		background-color: transparent;
+        		position: inherit;
+				h2.tagline {
+					width: 100%;
+					font-size: rem-calc(40px);
+					line-height: rem-calc(44px);
+					margin-top: rem-calc(20px);
+					margin-bottom: rem-calc(20px);
+				}
+			}
+			main#container {
+				h1 {
+					font-size: rem-calc(30px);
+					line-height: rem-calc(35px);
+					margin-top: rem-calc(0px);
+					margin-bottom: rem-calc(30px);
+				}
+				article {
+					p {
+						font-size: rem-calc(16px);
+						line-height: rem-calc(22px);
+					}
+				}
+			}
+		}
+		#big-o {
+			display: none;
+		}
+	}
+}

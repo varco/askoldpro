@@ -1,0 +1,179 @@
+.schedulesWrapper {
+    @include modalWrapper;
+    z-index: 5001;
+    &.schedulesActive {
+        top: 0;
+        opacity: 1;
+    }
+    &.schedulesInactive {
+        .right {
+            display: none;
+        }
+    }
+
+    .schedulesInner {
+        @include modalInnerLarge;
+
+        p {
+			font-size: rem-calc(20px);
+			line-height: rem-calc(27px);
+	        margin-bottom: 1.25em;
+			@media #{$medium-only} {
+				font-size: rem-calc(18px);
+				line-height: rem-calc(24px);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(16px);
+				line-height: rem-calc(21px);
+			}
+        }
+        sup {
+	        font-size: rem-calc(15px);
+		    font-weight: 500;
+        }
+        ol {
+            list-style-type: lower-roman;
+            list-style-position: outside;
+            margin: 5px 0px 0px 30px;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+
+        .right {
+            @include modalRightLarge;
+
+            .button {
+                @include modalButton;
+            }
+        }
+
+        aside {
+	        text-align: left;
+
+	        ul {
+		        font-size: rem-calc(30px);
+		        line-height: rem-calc(40px);
+		        color: $color-yellow;
+		        font-weight: 500;
+	            position: relative;
+			    margin-top: -90px;
+			    margin-left: rem-calc(110px);
+			    margin-bottom: rem-calc(70px);
+
+				@media #{$small-only} {
+			        font-size: rem-calc(20px);
+			        line-height: rem-calc(30px);
+				    margin-top: rem-calc(20px);
+					margin-bottom: rem-calc(50px);
+				    margin-left: 0;
+			    }
+
+		        li {
+			        display: inline-block;
+			        margin: 0px;
+			        padding: 0px;
+			        text-transform: uppercase;
+				    width: 40px;
+				    text-align: center;
+			        background-color: $color-white;
+				    @media #{$small-only} {
+				        width: 30px;
+				    }
+
+			        &:hover {
+				        background-color: $color-yellow;
+			        }
+
+			        a {
+				        display: block;
+				        width: 40px;
+				        text-align: center;
+				        margin: 0 auto;
+				        color: $color-yellow;
+					    @media #{$small-only} {
+					        width: 30px;
+					    }
+
+				        &:hover {
+					        color: $color-white;
+				        }
+			        }
+
+			        &.schedule-bullet {
+				        font-weight: 100;
+				        text-transform: capitalize;
+					    text-align: left;
+                        clear: both;
+                        display: block;
+					    @media #{$small-only} {
+							width: 90px;
+							background: none;
+					    }
+				        &:hover {
+					        background: none;
+					        a {
+						        color: $color-yellow;
+					        }
+				        }
+			        }
+
+
+			        &.current {
+				        background-color: $color-yellow;
+				        a {
+					        color: $color-white;
+				        }
+
+			        }
+
+		        }
+	        }
+        }
+
+		#schedule-icon {
+			display: inline-block;
+		    background-image: url('../images/icon-schedules-yellow.svg');
+		    background-repeat: no-repeat;
+		    background-size: 100%;
+		    background-position: center center;
+		    width: 90px;
+		    height: 90px;
+		}
+
+        h2 {
+	        display: none;
+		}
+
+		p {
+			text-align: left;
+		}
+
+		article {
+			padding-right: 0px;
+		}
+
+
+    }
+}
+
+@media only screen and (max-width: 40em) {
+
+    .schedulesWrapper {
+
+        .schedulesInner {
+
+            @include modalInnerSmall;
+
+            .right {
+	            @include modalRightSmall;
+            }
+            #schedule-icon {
+                display: none;
+            }
+            h5 {
+                margin-bottom: 0.5em
+            }
+        }
+    }
+}

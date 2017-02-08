@@ -1,0 +1,48 @@
+<div id="stop" class="row collapse">
+
+    <div class="small-12 medium-2 columns">
+    </div>
+
+    <div class="small-12 medium-9 columns end">
+
+        <section class="stop-text row">
+            <div class="small-12 columns">
+                <p data-ng-bind-html="__services._data.trustAsHTML(__data.contact.message.termination)"
+                    data-angular-compile
+                    data-ng-class="{current:__state.modal.active}">
+                </p>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="small-12 columns">
+                <span class="line"></span>
+            </div>
+        </div>
+
+        <section class="team row">
+            <div class="small-12 medium-6 columns"
+                data-ng-repeat="member in __data.contact.team">
+
+                <div class="biotext">
+                    <p><em>{{member.title}}</em><br />
+                        {{member.phone}}<br />
+                        <a href="mailto:{{member.email}}">{{member.email}}</a><br />
+                        {{member.office}}
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about-text row">
+            <div class="small-12 columns">
+                <p>{{__data.contact.about}}</p>
+            </div>
+        </section>
+
+        <footer ng-include="'views/partials/copyright.html'"></footer>
+
+    </div>
+
+</div>

@@ -1,0 +1,240 @@
+.browsehappy {
+	margin: 0.2em 0;
+	background: #ccc;
+	color: #000;
+	padding: 0.2em 0;
+}
+
+.row {
+	  max-width: rem-calc(1200px);
+}
+
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+body {
+	padding: 0;
+	background-color: #fefefe;
+	color: $color-grey-dark;
+	font-size: 16px;
+	line-height: 20px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	font-family: $font-default;
+	&.guide, &.landing, &.stop {
+		#wrapper {
+			opacity: 1;
+		}
+	}
+	&.guide {
+		#wrapper {
+			@media #{$small-only} {
+				padding: 0;
+			}
+		}
+	}
+
+	.grey {
+		background-color: $color-grey-light !important;
+	}
+
+	#wrapper {
+		padding: 0 1rem; // allow more padding for a better look
+		opacity: 0; // no flash of unstyled content while Angular loads
+
+		h1, h2, h3, h4, h5 {
+			letter-spacing: -0.033em;
+			color: $color-grey-dark;
+		}
+
+		h1 {}
+
+		h2.title { // step title
+            font-size: rem-calc(60px);
+            line-height: rem-calc(66px);
+			@media #{$medium-only} {
+				font-size: rem-calc(30px);
+				line-height: rem-calc(35px);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(40px);
+				line-height: rem-calc(44px);
+			}
+		}
+
+		h3,
+		.note p,
+		.about-text p { // step subtitle/description
+			font-size: rem-calc(22px);
+			line-height: rem-calc(29px);
+			@media #{$medium-only} {
+				font-size: rem-calc(20px);
+				line-height: rem-calc(27px);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(18px);
+				line-height: rem-calc(24px);
+			}
+		}
+
+		h4,
+		p.qdef,
+		.stop-text p {
+			font-size: rem-calc(25px);
+			line-height: rem-calc(33px);
+			@media #{$medium-only} {
+				font-size: rem-calc(23px);
+				line-height: rem-calc(31px);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(21px);
+				line-height: rem-calc(28px);
+			}
+		}
+
+		h5 {
+			margin-bottom: rem-calc(60px);
+            font-size: rem-calc(47px);
+            line-height: rem-calc(57px);
+			@media #{$medium-only} {
+				font-size: rem-calc(45px);
+				line-height: rem-calc(54px);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(43px);
+				line-height: rem-calc(52px);
+			}
+		}
+
+		h6 {
+			margin-bottom: rem-calc(50px);
+			font-size: rem-calc(22px);
+			line-height: rem-calc(29px);
+			@media #{$medium-only} {
+				font-size: rem-calc(20px);
+				line-height: rem-calc(27px);
+			}
+			@media #{$small-only} {
+				font-size: rem-calc(18px);
+				line-height: rem-calc(24px);
+			}
+		}
+
+		p {
+			font-weight: 100;
+			word-break: break-word;
+		}
+
+		p a,
+		h1 a,
+		h2 a,
+		h3 a,
+		h4 a {
+			&:link, &:visited {
+				color: $color-blue;
+				text-decoration: none;
+				border-bottom: 1px solid rgba(0, 131, 193, 0);
+				-webkit-transition: border 500ms ease;
+				-moz-transition: border 500ms ease;
+				-ms-transition: border 500ms ease;
+				-o-transition: border 500ms ease;
+				transition: border 500ms ease;
+				cursor: pointer;
+			}
+			&:hover, &:active {
+				color: $color-blue;
+				text-decoration: none;
+				border-bottom: 1px solid rgba(0, 131, 193, 1);
+			}
+		}
+		p a#download-CanadianPrivatePlacementsGuide {
+			margin-top: 0.5em;
+			font-weight: 500;
+		}
+
+		b, strong {
+			font-weight: 500;
+		}
+
+		i, em {
+			font-style: italic;
+		}
+
+		article {
+			font-size: 20px;
+			line-height: 28px;
+			color: $color-grey-dark;
+		}
+
+		@-ms-viewport{
+		  width: device-width;
+		}
+
+		.container-narrow > hr {
+		  margin: 30px 0;
+		}
+
+		main.freeze form {
+			height: 0 !important;
+		}
+
+		.border-top {
+			padding-top: 60px;
+			margin-top: 10px;
+			border-top: 1px dashed $color-grey-light;
+		}
+
+		.padding-top {
+			padding-top: 60px;
+		}
+
+		h4,
+		p.qdef,
+		.schedulesInner article {
+			ul {
+	            text-align: left;
+	            margin: 6px 0px 0px 30px;
+	            list-style-type: disc;
+	            list-style-position: outside;
+	            li {
+		            margin-bottom: 6px;
+	            }
+	        }
+		}
+
+		ol {
+            list-style-type: lower-roman;
+            list-style-position: outside;
+            margin: 5px 0px 0px 30px;
+            li {
+                margin-bottom: 5px;
+            }
+        }
+
+	}
+
+	.copyright {
+		.pdf {
+			margin-bottom: 1.5em;
+			font-size: 1.1em;
+			a {text-decoration: none;}
+			img { margin-left: 10px; width: 1em; position: relative; top: 5px;}
+		}
+	}
+
+}
+
+@media #{$small-only} {
+	#wrapper {
+		header#header {
+			h1 {
+				width: rem-calc(220px);
+				margin-bottom: rem-calc(10px);
+			}
+		}
+	}
+}
+

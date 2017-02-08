@@ -1,0 +1,12 @@
+{
+    "team" : {
+        "1" : {
+            "title" : "",
+            "phone" : "(647) 241-4090",
+            "email" : "ask@oldpro.ca",
+            "office" : "Toronto"
+        }
+    },
+    "default" : "Get In Touch<br>Contact Old Pro.",
+    "about": "Old Pro is a based Web Development Consultant &amp; Computing Lifestyle Coach in Toronto, Ontario."
+}

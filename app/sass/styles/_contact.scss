@@ -1,0 +1,94 @@
+.stop #container {
+	padding-top: 220px;
+}
+#stop {
+
+	#stop-icon {
+	    display: block;
+	    background-image: url('../images/icon-eject-red.svg');
+	    background-repeat: no-repeat;
+	    background-size: 100%;
+	    background-position: center center;
+	    width: 90px;
+	    height: 90px;
+	    text-align: left;
+	    margin-left: 0.9375rem;
+	    margin-bottom: rem-calc(40px);
+	}
+
+	.stop-text {
+		p {
+			&::first-line {
+				font-weight: 500;
+			}
+		}
+	}
+
+	.line {
+	    display: block;
+	    width: 80px;
+	    height: rem-calc(50px);
+	    border-top: 1px solid $color-red;
+    }
+
+    @media #{$small-up} {
+		.team {
+			position: relative;
+			margin-bottom: rem-calc(40px);
+			.biopic {
+				img {
+					width: 100%;
+					@include round(50em);
+				}
+			}
+			.biotext {
+				text-align: center;
+				h5 {
+					font-size: rem-calc(30px);
+					line-height: rem-calc(40px);
+					font-weight: 100;
+					color: $color-grey-dark;
+					text-transform: uppercase;
+				    margin-bottom: rem-calc(10px);
+				    margin-top: rem-calc(30px);
+					span {
+						font-weight: 500;
+					}
+				}
+
+				p {
+					font-size: rem-calc(20px);
+					line-height: rem-calc(26px);
+					color: $color-grey-dark;
+
+					em {
+						font-style: italic;
+					}
+
+				}
+			}
+		}
+    }
+
+    @media #{$medium-down} {
+		.team {
+			margin-bottom: 0px;
+		    .biopic {
+				float: none;
+			}
+			.biotext {
+				text-align: left;
+			}
+		}
+		.stop-text {
+			h5 {
+				font-weight: 500;
+				clear: both;
+				display: block;
+				line-height: 1em;
+			}
+		}
+    }
+
+}
+

@@ -1,0 +1,32 @@
+.viewport {
+    overflow: auto;
+    max-height: 100%;
+}
+
+.hide-scroll {
+    overflow: hidden;
+    height: 200vh;
+    padding: 0 5px;
+    position: relative;
+    clear: left;
+}
+
+.hide-scroll:after {
+    content: '';
+    height: 2em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.viewport p:last-child {
+    margin-bottom: 2em;
+}
+
+/* Treatment on Landing page */
+.landing {
+    .viewport {
+        overflow: initial;
+    }
+}

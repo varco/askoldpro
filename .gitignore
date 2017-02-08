@@ -1,0 +1,9 @@
+/node_modules
+/dist
+.tmp
+.sass-cache
+/bower_components
+app/css
+app/.sass-cache/
+.travis.yml
+.yo-rc.json

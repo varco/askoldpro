@@ -1,0 +1,64 @@
+<aside id="menu"
+    data-off-canvas
+    data-ng-if="__state.location != 'landing'"
+    data-ng-class="{showmenu:container.menu.clicked}">
+    <ul>
+        <li class="nav-close">
+            <a class="button-close show-for-small-only"
+                title="Close Menu"
+                data-ng-click="container.menu.clicked = container.menu.clicked === true ? false : true"
+                data-ng-class="{showmenu:container.menu.clicked}">
+            </a>
+        </li>
+        <li class="nav-home">
+            <a class="button-home"
+                title="Return to homepage &raquo;"
+                data-ng-click="__state.new = false"
+                data-ui-sref="landing">
+                <span>Home</span>
+            </a>
+        </li>
+        <li class="nav-stop">
+            <a class="button-stop"
+                title="Need Help? Get in touch with an Osler associate &raquo;"
+                data-ng-if="__state.location != 'contact'"
+                data-ng-class="{disable:__state.location == 'contact'}"
+                ui-sref="contact">
+                <span>Contact</span>
+            </a>
+        </li>
+        <li class="nav-back">
+            <a class="button-back"
+                title="Return to questions &raquo;"
+                data-ng-if="__state.location == 'contact' && __state.previous != 'landing'"
+                data-ng-click="__services._location.backToGuide();"
+                ui-sref="guide"
+                >
+                <span>Back</span>
+            </a>
+        </li>
+        <li class="nav-schedules">
+            <a class="button-schedules"
+                title="Review supplimentary resources &raquo;"
+                data-ng-if="__state.previous != 'landing'"
+                data-ng-click="__services._animation.openSchedule('a');">
+                <span>Schedules</span>
+            </a>
+        </li>
+        <li class="nav-progress">
+            <ul id="progress-bar" class="inline-list">
+                <li data-ng-if="__state.location == 'guide'"
+                    data-ng-repeat="step in __data.visibleStepObject track by $index"
+                    data-ng-class="{completed:__data.stepControlObject[step.jsonIndex].completed, active:__data.stepControlObject[step.jsonIndex].active }">
+                    <a data-ng-if="!__data.stepControlObject[step.jsonIndex].active"
+                        data-ng-click="__services._location.locationUpdate([ $index + 1 , 1], 'menu', [ $index + 1 , 1])"
+                        title="Go to Step #{{$index + 1}}"><span>Step {{$index + 1}}</span>
+                    </a>
+                    <a data-ng-if="__data.stepControlObject[step.jsonIndex].active"
+                        title="Currently on Step #{{$index + 1}}"><span>Step {{$index + 1}}</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</aside>

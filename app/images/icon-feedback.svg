@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#CCCCCC;}
+	.st1{filter:url(#Adobe_OpacityMaskFilter);}
+	.st2{fill:#FFFFFF;}
+	.st3{mask:url(#SVGID_1_);}
+	.st4{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st5{fill:#F7F7F7;}
+	.st6{fill:#CD153E;}
+	.st7{fill:none;stroke:#FFFFFF;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st8{fill:#F89C24;}
+	.st9{opacity:0.5;fill:#0083C1;}
+	.st10{fill:#0083C1;}
+</style>
+<g>
+	<circle class="st6" cx="100" cy="100" r="100"/>
+	<g>
+		<path class="st7" d="M92.6,128.7l13.7-17.5h42.4c8,0,14.5-6.5,14.5-14.5V64.9c0-8-6.5-14.5-14.5-14.5H107c-8,0-14.5,6.5-14.5,14.5
+			v20.3"/>
+		<path class="st7" d="M82.6,106.5c0-5.4-4.4-9.8-9.8-9.8H44.7c-5.4,0-9.8,4.4-9.8,9.8v21.4c0,5.4,4.4,9.8,9.8,9.8h28.6l9.2,11.8"/>
+		<circle class="st7" cx="49.5" cy="117.7" r="0.5"/>
+		<circle class="st7" cx="59.6" cy="117.7" r="0.5"/>
+		<circle class="st7" cx="69.6" cy="117.7" r="0.5"/>
+		<circle class="st7" cx="127.7" cy="98.8" r="0.5"/>
+		<path class="st7" d="M127.7,89.3c0-4.8,8.7-7,8.7-15.3c0-4.8-3.9-8.8-8.7-8.8c-4.8,0-8.8,3.9-8.8,8.8"/>
+	</g>
+</g>
+</svg>

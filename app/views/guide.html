@@ -1,0 +1,112 @@
+<form id="guide"
+	class="hide-scroll">
+
+	<!-- Main: Display of Steps and Questions -->
+	<section id="step_{{$index + 1}}"
+		class="step_{{$index + 1}} step animateOff"
+		data-ng-repeat="step in __data.visibleStepObject track by $index"
+		data-ng-class="{animatePrevious:__data.stepControlObject[step.jsonIndex].classes.previous,
+			animateNext:__data.stepControlObject[step.jsonIndex].classes.next,
+			animateCurrent:__data.stepControlObject[step.jsonIndex].classes.current}">
+
+		<div class="row">
+			<div class="small-12 columns">
+				<h2 class="number">
+					<span>{{$index + 1}}</span>
+				</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<header id="step_{{step.jsonIndex}}_question_0"
+				class="section-header small-12 medium-6 columns end thead">
+				<h2 class="title">
+					{{__data.steps[step.jsonIndex].title}}
+				</h2>
+			</header>
+		</div>
+
+		<div class="row">
+
+			<!-- Header: Step Title & Description -->
+			<header id="step_{{step.jsonIndex}}_question_0"
+				class="section-header small-12 medium-6 columns shead">
+
+				<h3 class="subtitle"
+					data-ng-bind-html="__services._data.trustAsHTML(__data.steps[step.jsonIndex].subtitle)"
+					data-angular-compile>
+				</h3>
+
+				<button class="note"
+					data-ng-if="__data.steps[step.jsonIndex].note.copy"
+					data-ng-click="__services._animation.note(step.jsonIndex, 0, __data.steps[step.jsonIndex].note.clicked === true ? false : true)"
+					data-ng-class="{inactive:!__data.steps[step.jsonIndex].note.clicked}">[note]
+				</button>
+
+				<div class="note note-body"
+					data-ng-if="__data.steps[step.jsonIndex].note.copy">
+					<p data-ng-class="{in:__data.steps[step.jsonIndex].note.clicked, out:!__data.steps[step.jsonIndex].note.clicked}">
+						<strong>{{__data.steps[step.jsonIndex].note.title}}</strong>
+						<span data-ng-if="__data.steps[step.jsonIndex].note.copy"
+							data-ng-bind-html="__data.steps[step.jsonIndex].note.copy"
+							data-angular-compile>
+						</span>
+					</p>
+				</div>
+
+				<div ng-include="'views/partials/copyright.html'"></div>
+			</header>
+
+			<!-- Section: Question(s) Title, Questions, Actions -->
+			<article id="questions"
+				class="questions small-12 medium-6 columns qhead">
+					<div id="step_{{step.jsonIndex}}_question_{{$index + 1}}"
+						class="question question_{{$index + 1}}"
+						data-ng-repeat="question in __data.stepControlObject[step.jsonIndex].questions"
+						data-ng-class="{active:__data.current.question == $index + 1, visible:question.visible}">
+							<p class="qdef compile compiled_{{step.jsonIndex}}_{{$index + 1}}"
+								data-ng-bind-html="__services._data.trustAsHTML(__data.steps[step.jsonIndex].questions[$index + 1].text)"
+								data-angular-compile
+								data-step="{{step.jsonIndex}}"
+								data-question="{{$index + 1}}"></p>
+
+							<button class="note"
+								data-ng-if="__data.steps[step.jsonIndex].questions[$index + 1].note"
+								data-ng-click="__services._animation.note(step.jsonIndex, $index + 1, __data.steps[step.jsonIndex].questions[$index + 1].note.clicked = __data.steps[step.jsonIndex].questions[$index + 1].note.clicked === true ? false : true)"
+								data-ng-class="{inactive:!__data.steps[step.jsonIndex].questions[$index + 1].note.clicked}">[note]
+							</button>
+
+							<div class="note note-body"
+								data-ng-if="__data.steps[step.jsonIndex].questions[$index + 1].note">
+								<p data-ng-class="{in:__data.steps[step.jsonIndex].questions[$index + 1].note.clicked, out:!__data.steps[step.jsonIndex].questions[$index + 1].note.clicked}">
+									<span data-ng-bind-html="__services._data.trustAsHTML(__data.steps[step.jsonIndex].questions[$index + 1].note.copy)"
+										data-angular-compile></span>
+								</p>
+							</div>
+
+							<div class="radioboxes">
+								<input type="radio"
+									   name="answer_{{step.jsonIndex}}_{{$index + 1}}"
+									   id="answer_{{step.jsonIndex}}_{{$index + 1}}_yes"
+									   value="{{__data.steps[step.jsonIndex].questions[$index + 1].yes.location}}"
+									   data-ng-click="__services._location.locationUpdate(__data.steps[step.jsonIndex].questions[$index + 1].yes.location, 'yes', [step.jsonIndex, $index + 1])">
+								<label for="answer_{{step.jsonIndex}}_{{$index + 1}}_yes">
+									<span></span>Yes
+								</label>
+
+								<input type="radio"
+									   name="answer_{{step.jsonIndex}}_{{$index + 1}}"
+									   id="answer_{{step.jsonIndex}}_{{$index + 1}}_no"
+									   value="{{__data.steps[step.jsonIndex].questions[$index + 1].no.location}}"
+									   data-ng-click="__services._location.locationUpdate(__data.steps[step.jsonIndex].questions[$index + 1].no.location, 'no', [step.jsonIndex, $index + 1])">
+
+								<label for="answer_{{step.jsonIndex}}_{{$index + 1}}_no">
+									<span></span>No
+								</label>
+							</div>
+					</div>
+			</article>
+
+		</div>
+	</section>
+</form>

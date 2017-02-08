@@ -1,0 +1,29 @@
+                    <div class="schedulesInner">
+
+                        <div class="right">
+                            <a class="button"
+                                data-ng-click="__state.schedules.active = __state.schedules.active === false ? true : false">Close</a>
+                        </div>
+
+                        <section>
+                            <!-- Schedule Menu -->
+                            <aside>
+                                <span id="schedule-icon"></span>
+                                <ul>
+                                    <li class="schedule-bullet">Schedules:</li>
+                                    <li data-ng-repeat="schedule in __data.schedules"
+                                        data-ng-class="{current: $index + 1 === __state.schedules.focus}">
+                                        <a data-ng-click="__services._animation.openSchedule(schedule.id)">{{schedule.id}}</a>
+                                    </li>
+                                </ul>
+                            </aside>
+
+                            <!-- main content goes here -->
+                            <article class="small-12">
+                                <h2>{{__data.schedules[__state.schedules.focus].title}}</h2>
+                                <p data-ng-bind-html="__services._data.trustAsHTML(__data.schedules[__state.schedules.focus].body)"
+                                    data-ng-class="{current:__state.schedules.clicked}"></p>
+                            </article>
+
+                        </section>
+                    </div>

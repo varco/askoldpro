@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="oldproApp"
+    data-ng-cloak>
+    <head>
+        <meta charset="utf-8">
+        <title>Old Pro - Get Better at the Internet</title>
+        <base href="">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1">
+        <meta http-equiv="Cache-control"
+            content="no-store">
+        <meta name="ROBOTS"
+            content="NOINDEX, NOFOLLOW">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet"
+            href="css/app.css">
+
+        <!-- Internet Explorer HTML5 enabling script: -->
+            <!--[if lte IE 9]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+                <style type="text/css">
+
+                    .clear {
+                        zoom: 1;
+                        display: block;
+                    }
+
+                </style>
+                <script type="text/javascript">
+                    var htmlElement = document.querySelector("html");
+                    htmlElement.className += " lte-ie9";
+                </script>
+            <![endif]-->
+
+    </head>
+    <body data-ng-class="{landing:__state.location == 'landing', guide:__state.location == 'guide', stop:__state.location == 'contact'}">
+        <!--[if lte IE 8]>
+            <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div id="big-o"></div>
+
+        <div id="wrapper">
+            <!-- Header -->
+            <div ng-include="'views/partials/header.html'"></div>
+
+            <!-- Menu -->
+            <div ng-include="'views/partials/menu.html'"></div>
+
+            <!-- Preloader -->
+            <div id="loader-wrapper">
+                <div id="loader"></div>
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
+            </div>
+
+            <!-- Main View -->
+            <main id="container"
+                class="row viewport collapse"
+                data-ng-class="{freeze: __state.schedules.active, freeze: __state.modal.active}">
+                <div class="large-12 columns">
+                    <div data-ui-view></div>
+                </div>
+            </main>
+
+            <!-- Schedules Modal -->
+            <main id="schedules"
+                class="schedulesWrapper"
+                data-ng-class="{schedulesActive:__state.schedules.active, schedulesInactive:!__state.schedules.active}"
+                ng-include="'views/partials/schedules.html'">
+            </main>
+
+            <!-- Interstitial Modal -->
+            <main id="modal"
+                class="modalWrapper"
+                data-ng-class="{modalActive:__state.modal.active}"
+                ng-include="'views/partials/modal.html'">
+            </main>
+
+        </div>
+
+        <script src="bower_components/requirejs/require.js"
+            data-main="scripts/main.js">
+        </script>
+    </body>
+</html>

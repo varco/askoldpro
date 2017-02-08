@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <title>icon-contact-red</title>
+  <circle cx="100" cy="100" r="100" style="fill: #cd153e"/>
+  <g>
+    <path d="M1147.9,671.1c19.4,19.4,45.2,35.8,53.8,27.2s13.2-19.7,13.2-19.7l-28.8-12.9-4.5,9.1s-13.3-11-19.9-17.6-17.4-19.7-17.4-19.7l9.1-4.5-12.9-28.8s-11.4,4.9-19.6,13.1,7.8,34.4,27.1,53.7h0.1Z" transform="translate(-1071 -547.6)" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 5px"/>
+    <path d="M1164.8,599.3a52.3,52.3,0,0,1,52.3,52.3" transform="translate(-1071 -547.6)" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 5px"/>
+    <path d="M1164.8,620.1a31.5,31.5,0,0,1,31.5,31.5" transform="translate(-1071 -547.6)" style="fill: none;stroke: #fff;stroke-linecap: round;stroke-linejoin: round;stroke-width: 5px"/>
+  </g>
+</svg>

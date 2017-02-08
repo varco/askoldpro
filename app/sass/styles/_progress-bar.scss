@@ -1,0 +1,69 @@
+li.nav-progress {
+	display: inline-block;
+	width: 40px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+ul#progress-bar.inline-list {
+	width: 40px;
+	@include round(100px);
+	background-color: $color-white-dirty;
+    margin: 0 auto;
+    padding: 0px;
+    li {
+        margin: 8px auto;
+        padding: 0px;
+        float: none;
+        width: rem-calc(22px);
+        height: rem-calc(22px);
+        text-align: center;
+	    background-image: url('../images/nav-grey.svg');
+	    background-repeat: no-repeat;
+	    background-size: 22px 22px;
+	    background-position: center center;
+
+        &.completed {
+		    background-image: url('../images/nav-blue-light.svg');
+        }
+
+        &.active {
+		    background-image: url('../images/nav-blue.svg');
+        }
+
+        a {
+            text-indent: -10000000px;
+	        width: rem-calc(22px);
+	        height: rem-calc(22px);
+
+		    &:hover {
+			    span {
+				    opacity: 1;
+				    right: 50px;
+			    }
+		    }
+
+			& span {
+			    opacity: 0;
+			    text-align: right;
+			    position: absolute;
+			    right: 40px;
+			    margin-top: 0px;
+			    padding: 5px 10px 5px 20px;
+			    color: $color-blue;
+			    background-color: $color-white-dirty;
+			    @include round(30px);
+			    font-size: rem-calc(17px);
+			    line-height: rem-calc(17px);
+			    font-weight: 100;
+                width: 70px;
+		    }
+        }
+
+    }
+}
+
+#menu ul li {
+    @include clearfix;
+}

@@ -1,0 +1,325 @@
+body.guide {
+
+	// top of page
+    .step {
+        padding: 200px 0 0 0;
+    }
+
+    @media #{$medium-only} {
+	    .step {
+	        padding: 170px 0 0 0;
+	    }
+    }
+
+    @media #{$small-only} {
+	    .step {
+	        padding: 230px 0 0 0;
+	    }
+    }
+
+    h2.number { // step assigned number
+        margin-bottom: rem-calc(50px);
+        span {
+            display: block;
+            background-color: $color-red;
+            color: $color-white;
+            width: 89px;
+            height: 89px;
+            margin: 0 auto;
+            padding-top: 15px;
+            margin-bottom: rem-calc(40px);
+            font-size: rem-calc(60px);
+            line-height: rem-calc(60px);
+            font-weight: 100;
+            @include round(90px);
+            text-align: center;
+        }
+    }
+    @media #{$small-only} {
+		h2.number {
+	        float: left;
+            margin-bottom: rem-calc(0px);
+            margin-left: 1rem; // fixes mobile wrapper
+	    }
+	}
+
+    // step heading detailed info
+    header.section-header {
+
+        @media #{$small-only} {
+            padding: 0 1.9375rem; // fixes mobile wrapper
+		}
+
+	    &.shead {
+		    margin-bottom: rem-calc(100px);
+	    }
+
+        @media #{$medium-up} {
+            &.columns, .column {
+                padding-right: rem-calc(60px);
+            }
+        }
+
+        h2.title { // step title
+            color: $color-red !important;
+            max-width: 45rem;
+            margin: 0 0 40px 0;
+            text-transform: capitalize;
+            font-weight: 100;
+        }
+
+        h3.subtitle { // step subtitle/description
+            color: $color-grey-dark;
+            max-width: 50rem;
+            margin: 0 0 30px 0;
+            font-weight: 100;
+            display: inline;
+        }
+
+        .copyright { // copyright
+			z-index: 200;
+			display: block;
+			position: relative;
+			margin-top: rem-calc(60px);
+        }
+
+    }
+
+    // vertical line
+    .line {
+        position: absolute;
+        background: transparent;
+        height: 0px;
+        background-color: $color-red;
+        left: 50%;
+        top: 280px;
+        width: 1px;
+    }
+    @media #{$small-only} {
+		.line {
+	        display: none;
+	    }
+	}
+
+    // question details
+    article {
+        &.column,
+        &.columns {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        z-index: 300;
+		padding-right: 0.9375rem;
+        &.columns, .column {
+            @media #{$small-only} {
+	            padding-left: 1.9375rem;
+			}
+        }
+        @media #{$medium-only} {
+            padding-right: rem-calc(80px) !important;
+        }
+
+        .question { // question wrapper
+            height: 0;
+            opacity: 0;
+            position: absolute;
+            visibility: hidden;
+            margin-right: 50px;
+            br {
+                content: "A" !important;
+                display: block !important;
+                margin-bottom: 0.5em !important;
+            }
+            &:before { // bullet
+	            @include round(50px);
+	            content: "";
+	            width: rem-calc(22px);
+	            height: rem-calc(22px);
+	            top: -8px;
+	            left: rem-calc(-10px);
+	            position: absolute;
+	            opacity: 1;
+	            @media #{$small-only} {
+		            top: 2px;
+		            left: rem-calc(-42px);
+	            }
+            }
+            &.visible  {
+	            &:before {
+		            background-color: $color-grey-light;
+	            }
+                height: inherit;
+                position: relative;
+                visibility: visible;
+                opacity: 1;
+                padding: 20px 20px 12px 1.75em;
+				.qdef,
+				.note,
+				.radioboxes {
+	                opacity: 0.7;
+				}
+                .radioboxes {
+                    margin-bottom: rem-calc(100px);
+                }
+            }
+            &.active  {
+	            &:before {
+		            background-color: $color-red;
+                    -webkit-transform: scale(1.2);
+                    -webkit-animation: pulse 2.65s ease-in-out infinite;
+                    animation: pulse 2.65s ease-in-out infinite;
+	            }
+                opacity: 1;
+                background-color: #efefef;
+
+                @include round(15px);
+				.qdef,
+				.note,
+				.radioboxes {
+	                opacity: 1;
+                    margin-bottom: rem-calc(10px);
+				}
+            }
+
+            h4, p.qdef  { // question definition
+                color: $color-grey-dark;
+                margin: 0px;
+                max-width: 50rem;
+                display: inline;
+                font-weight: 100;
+                z-index: 100;
+            }
+
+			.radioboxes { // radio boxes
+				display: block;
+	            margin-top: rem-calc(50px);
+	            //margin-bottom: rem-calc(100px);
+                z-index: 200;
+
+	            label {
+	                font-size: rem-calc(30px);
+	                line-height: rem-calc(30px);
+	                font-weight: 100;
+	                position: relative;
+	                z-index: 50;
+	                margin-left: 0px;
+	                margin-right: 18px;
+	                padding-top: 5px;
+
+	                & span {
+	                display: inline-block;
+	                width: rem-calc(40px);
+	                height: rem-calc(40px);
+	                margin-top: -5px;
+	                margin-right: 10px;
+	                vertical-align: middle;
+	                cursor: pointer;
+					background-image: url('../images/radio-off.svg');
+					background-repeat: no-repeat;
+					background-size: 40px 40px;
+					background-position: center center;
+	                }
+
+	                &:hover span {
+		                /*transform: scale(1.1);
+					    -ms-transform: scale(1.1);
+					    -webkit-transform: scale(1.1);*/
+		                background-image: url('../images/radio-hover.svg');
+
+	                }
+	            }
+
+	            input[type="radio"] {
+	                display: none;
+	            }
+
+	            input[type="radio"]:checked + label span {
+	                background-image: url('../images/radio-on.svg');
+	            }
+			}
+        }
+    }
+
+	// note
+    header, article {
+        button, .button { // note button
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 18px;
+            padding: 0;
+            position: relative;
+            text-decoration: none;
+            display: inline;
+            background: none;
+            vertical-align: top;
+			color: $color-blue;
+			&:link, &:visited {
+				text-decoration: none;
+				border-bottom: 1px solid rgba(0, 131, 193, 0);
+				-webkit-transition: border 500ms ease;
+				-moz-transition: border 500ms ease;
+				-ms-transition: border 500ms ease;
+				-o-transition: border 500ms ease;
+				transition: border 500ms ease;
+				cursor: pointer;
+			}
+			&:hover, &:active {
+				text-decoration: none;
+				border-bottom: 1px solid rgba(0, 131, 193, 1);
+			}
+        }
+
+        .note-body { // note content
+			display: block;
+			position: relative;
+            -ms-overflow-style: none;
+                overflow: hidden;
+            p {
+                font-size: rem-calc(20px);
+                line-height: rem-calc(28px);
+                -ms-overflow-style: none;
+                overflow: hidden;
+                &.out {
+                    height: 0;
+                    margin: 0;
+                    opacity: 0;
+                    padding: 0;
+					position: absolute;
+                    left: -10000px;
+					top: -10000px;
+                    span {
+                        height: 0;
+                        opacity: 0;
+                    }
+                }
+
+                &.in {
+                    display: block;
+                    overflow: auto;
+                    height: auto;
+                    padding: 40px 0px 0px 0px;
+                    opacity: 1;
+                    -ms-overflow-style: none;
+                    overflow: hidden;
+                    span {
+                        height: auto;
+                        opacity: 1;
+                    }
+		            &:before {
+		                content: '';
+					    display: block;
+					    width: 80px;
+					    height: rem-calc(40px);
+					    border-top: 1px solid $color-red;
+		            }
+                }
+            }
+
+        }
+    }
+
+}

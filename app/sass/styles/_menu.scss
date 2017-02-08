@@ -1,0 +1,130 @@
+.landing header#header a.cheeseburger {
+	display: none;
+}
+
+header#header a.cheeseburger {
+	display: none;
+    background-image: url('../images/menu-open.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    width: rem-calc(40px);
+    height: rem-calc(40px);
+    position: absolute;
+    top: 35px;
+    right: 1rem;
+    margin-right: .5rem;
+    cursor: pointer;
+    &:hover {
+	    /*transform: scale(1.1);
+	    -ms-transform: scale(1.1);
+	    -webkit-transform: scale(1.1);*/
+    }
+}
+@media #{$small-only} {
+    header#header a.cheeseburger {
+		display: block;
+	}
+}
+
+#menu {
+    position: fixed;
+    right: 1.5rem;
+    top: 11rem;
+    z-index: 2000;
+    li.nav-close {
+	    display: none;
+	    @media #{$small-only} {
+		    display: block;
+		}
+    }
+
+    a.button-close {
+	    position: relative;
+        float: right;
+	    width: rem-calc(40px);
+	    height: rem-calc(40px);
+	    background-image: url('../images/menu-close.svg');
+	    background-repeat: no-repeat;
+        background-size: 40px 40px;
+	    background-position: center center;
+        margin-bottom: rem-calc(12px);
+	}
+
+    a.button-home,
+    a.button-stop,
+    a.button-back,
+    a.button-schedules {
+        position: relative;
+        float: right;
+        width: rem-calc(40px);
+        height: rem-calc(40px);
+        background-repeat: no-repeat;
+        background-size: 40px 40px;
+        background-position: center center;
+        margin-bottom: rem-calc(12px);
+    }
+    a.button-home {
+        background-image: url('../images/icon-home-red.svg');
+    }
+    a.button-stop {
+        background-image: url('../images/icon-contact-red.svg');
+    }
+    a.button-schedules {
+        background-image: url('../images/icon-schedules-yellow.svg');
+    }
+    a.button-back {
+        background-image: url('../images/icon-back.svg');
+    }
+    a.button-home:hover,
+    a.button-stop:hover,
+    a.button-guide:hover,
+    a.button-back:hover,
+    a.button-schedules:hover {
+	    span {
+		    opacity: 1;
+		    right: 50px;
+	    }
+    }
+    a.button-home span,
+    a.button-stop span,
+    a.button-back span,
+    a.button-schedules span {
+	    opacity: 0;
+	    text-align: right;
+	    position: absolute;
+	    right: 40px;
+	    margin-top: 7px;
+	    padding: 5px 10px;
+	    background-color: $color-white-dirty;
+	    @include round(30px);
+	    font-size: rem-calc(17px);
+	    line-height: rem-calc(17px);
+	    font-weight: 100;
+    }
+    a.button-home span {
+	    color: $color-red;
+    }
+    a.button-stop span {
+	    color: $color-red;
+    }
+    a.button-back span {
+        color: $color-red;
+    }
+    a.button-schedules span {
+	    color: $color-yellow;
+    }
+
+	// mobile
+    @media #{$small-only} {
+	    top: 0px;
+		right: -10rem;
+	    padding: 34px 24px;
+	    height: 100%;
+		background-color: $color-grey;
+	    &.showmenu {
+		    right: 0px;
+	    }
+    }
+
+}

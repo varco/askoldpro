@@ -1,0 +1,38 @@
+                    <div class="modalInner">
+                        <section>
+                            <div class="small-12">
+                                <article>
+                                    <div id="modalText">
+                                        <p data-ng-bind-html="__services._data.trustAsHTML(__state.modal.text)"
+                                            data-angular-compile>
+                                        </p>
+                                    </div>
+                                </article>
+                                <a class="button grey dismiss"
+                                    data-ng-if="__state.modal.buttons.close.action == 'dismiss'"
+                                    data-ng-click="__services._state.dismiss()">
+                                    {{__state.modal.buttons.close.text}}
+                                </a>
+                                <a class="button grey dismiss"
+                                    data-ng-if="__state.modal.buttons.dismiss.action == 'dismiss'"
+                                    data-ng-click="__services._state.dismiss()">
+                                    {{__state.modal.buttons.dismiss.text}}
+                                </a>
+                                <a class="button proceed"
+                                    data-ng-if="__state.modal.buttons.proceed.action == 'proceed'"
+                                    data-ng-click="__services._state.proceed()">
+                                    {{__state.modal.buttons.proceed.text}}
+                                </a>
+                                <a class="button terminate"
+                                    data-ng-if="__state.modal.buttons.proceed.action == 'terminate'"
+                                    data-ng-click="__services._state.terminate()">
+                                    {{__state.modal.buttons.proceed.text}}
+                                </a>
+                                <label id="dismiss-steps"
+                                    data-ng-if="!__state.modal.exit">
+                                    <input type="checkbox"
+                                        data-ng-click="__services._state.bypass()"> <span> Don't show me this</span>
+                                </label>
+                            </div>
+                        </section>
+                    </div>

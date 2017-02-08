@@ -1,0 +1,51 @@
+<header id="header"
+    class="header">
+    <div id="header-content"
+        class="row" >
+        <div class="large-12 columns above">
+            <!-- Logo - Linked on sub-pages -->
+
+            <h1 class="logo"
+                data-ng-if="__state.location == 'landing'">
+                Old Pro
+            </h1>
+            <a id="logo"
+                ui-sref="landing"
+                title="Restart the Old Pro Guide to Web Development Skills"
+                data-ng-if="__state.location != 'landing'"
+                data-ng-click="__state.new = false">
+                <h1 class="logo">Old Pro</h1>
+            </a>
+
+            <!-- Subtitle - Smaller, right-aligned on sub-pages -->
+            <h2 class="tagline landing"
+                data-ng-class="{landing:__state.location == 'landing', guide:__state.location == 'guide', stop:__state.location == 'stop'}">
+                Get Better at the Internet
+            </h2>
+            <div ng-include="'views/partials/menu.html'"></div>
+            <!-- Call To Action - Start, or Resume and Reset -->
+            <a id="start-here"
+                class="start-button start"
+                data-ng-if="__state.location == 'landing' && __state.fresh === true"
+                data-ng-click="__services._state.reset()"
+                ui-sref="guide">Start Here<span></span>
+            </a>
+            <a id="resume-here"
+                class="start-button resume"
+                data-ng-if="__state.location == 'landing' && __state.fresh !== true"
+                 data-ng-click="__services._state.triggerProgressBar()"
+                ui-sref="guide">Resume<span></span>
+            </a>
+            <a id="reset-here"
+                class="start-button reset"
+                data-ng-if="__state.location == 'landing' && __state.fresh !== true"
+                data-ng-click="__services._state.reset()"
+                ui-sref="guide">Reset<span></span>
+            </a>
+        </div>
+    </div>
+    <a class="cheeseburger"
+        data-ng-click="container.menu.clicked = container.menu.clicked === true ? false : true"
+        data-ng-class="{showmenu:container.menu.clicked}">
+    </a>
+</header>
