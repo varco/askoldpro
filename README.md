@@ -1,17 +1,16 @@
 # README #
 
-    * Project: Old Pro promo site
-    * Version: 1.0
-    * Author: M. Leslie Bent
-    * Url: [http://oldpro.ca](http://oldpro.ca)
+ * Project: Old Pro promo site
+ * Version: 1.0
+ * Author: M. Leslie Bent
+ * Url: [http://oldpro.ca](http://oldpro.ca)
 
 This app is forked from a 2016 project, and is used as a quick skill demonstration for Rangle.io.
 
-
 ## Dependencies ##
 
-    * Grunt build system
-    * Requires npm, bower, and compass
+ * Grunt build system
+ * Requires npm, bower, and compass
 
 ### setup ###
 
@@ -23,3 +22,7 @@ This app is forked from a 2016 project, and is used as a quick skill demonstrati
 
 ### build ###
     `grunt build`
+
+#### More code! ###
+
+* [Wordpress Makefile](https://github.com/varco/wp-makefile)
