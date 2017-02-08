@@ -25,16 +25,18 @@ This app is a quick skill demonstration for Rangle.io - recycling a 2016 Angular
 
 ### setup ###
 
-    `git clone git@github.com:varco/askoldpro.git`
-    `sudo npm install && npm update`
-    `bower install && bower update`
-    `compass compile`
-    `cd app && compass compile`
+    git clone git@github.com:varco/askoldpro.git
+    sudo npm install && npm update
+    bower install && bower update
+    compass compile
+    cd app && compass compile
 
 ### build system ###
-    `grunt serve`
-    `grunt build`
-    `grunt test`
+    grunt serve
+
+    grunt build
+
+    grunt test
 
 ## More code! ##
 
