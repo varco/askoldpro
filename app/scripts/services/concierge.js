@@ -11,8 +11,8 @@ define([
 	 * @ngdoc service
 	 * @name oldproApp.services:ConciergesService
 	 * @description
-	 * # ConciergesService
-	 * Service in the oldproApp.
+	 * # ConciergeService
+	 * Boostraps the angular module by loading local services in the oldproApp.
 	 */
 
 	angular.module('oldproApp.services.ConciergeService', [])

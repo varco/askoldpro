@@ -13,7 +13,15 @@ This app is a quick skill demonstration for Rangle.io - recycling a 2016 Angular
  * Requires npm, bower, and compass
  * RequireJS (app/index.html => app/js/main.js)
  * Angular 1.4 (appConfig in app/js/app.js)
- * Handwritten JSON objects in /data
+
+### Highlights/Notes ###
+
+ * ConciergeService injects local dependencies, initates preloader and listens for state changes
+ * DataService calls handwritten JSON objects in /data
+ * RunnerService manages overall data model as the app is traversed
+ * LocationService manages user interactions with model as app is traversed
+ * Angular Compile Directive for returned HTML parsed from JSON
+ * Uses Angular UI-Router for better state handling
 
 ### setup ###
 
