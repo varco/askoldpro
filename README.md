@@ -5,7 +5,7 @@
  * Author: M. Leslie Bent
  * http://oldpro.ca
 
-This app is forked from a 2016 project, and is used as a quick skill demonstration for Rangle.io.
+This app is a quick skill demonstration for Rangle.io - recycling a 2016 Angular web application.
 
 ## Dependencies ##
 
@@ -13,6 +13,7 @@ This app is forked from a 2016 project, and is used as a quick skill demonstrati
  * Requires npm, bower, and compass
  * RequireJS (app/index.html => app/js/main.js)
  * Angular 1.4 (appConfig in app/js/app.js)
+ * Handwritten JSON objects in /data
 
 ### setup ###
 
