@@ -2,7 +2,7 @@
 
  * Project: Old Pro promo site
  * Version: 1.0
- * Author: [M. Leslie Bent](https://www.linkedin.com/)
+ * Author: [M. Leslie Bent](https://ca.linkedin.com/in/varsco)
  * http://oldpro.ca
 
 This app is a quick skill demonstration for Rangle.io - recycling a 2016 Angular web application.
