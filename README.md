@@ -3,7 +3,7 @@
  * Project: Old Pro promo site
  * Version: 1.0
  * Author: M. Leslie Bent
- * Url: [http://oldpro.ca](http://oldpro.ca)
+ * http://oldpro.ca
 
 This app is forked from a 2016 project, and is used as a quick skill demonstration for Rangle.io.
 
@@ -25,5 +25,5 @@ This app is forked from a 2016 project, and is used as a quick skill demonstrati
 
 #### More code! ###
 
-* [Wordpress Makefile](https://github.com/varco/wp-makefile)
-* [CodePen.io](codepen.io/var)
+* https://github.com/varco/wp-makefile
+* http://codepen.io/var
