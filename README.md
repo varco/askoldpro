@@ -25,5 +25,5 @@ This app is forked from a 2016 project, and is used as a quick skill demonstrati
 
 #### More code! ###
 
-* https://github.com/varco/wp-makefile
-* http://codepen.io/var
+* [WordPress Makefile](https://github.com/varco/wp-makefile)
+* [CodePen](http://codepen.io/var)
